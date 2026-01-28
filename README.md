@@ -34,7 +34,7 @@ yarn dev
 
 ## Key Design Decisions
 
-### Architecture & Framework Choice
+### Framework Choice
 I chose **Next.js** with the App Router for this project as it provides good SEO experience and built in router so i dont need to handle the routing part.
 
 ### State Management
