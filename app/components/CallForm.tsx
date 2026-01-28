@@ -14,7 +14,7 @@ export function CallForm() {
 
   const createCall = useCreateCall();
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.SyntheticEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       await createCall.mutateAsync(formData);
