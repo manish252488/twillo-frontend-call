@@ -32,5 +32,32 @@ npm run dev
 yarn dev
 ```
 
+## Key Design Decisions
+
+### Architecture & Framework Choice
+I chose **Next.js** with the App Router for this project as it provides good SEO experience and built in router so i dont need to handle the routing part.
+
+### State Management
+Using  **TanStack Query (React Query)** because:
+- It handles caching, refetching, and background updates automatically
+- Built-in loading and error states make the UI code cleaner
+- keeps refreshing the data at my defined interval without refresh. 
+
+### Styling Approach
+I used **Tailwind CSS** for styling because to keep the css build optimized and
+we can easlily customize the theme in future using the config file or extended css.
+
+### Component Structure
+I kept components relatively simple and focused on single responsibilities:
+- created folder structure assets, components, hooks, lib, provider, types
+
+## What I Would Improve With More Time
+
+- Unit tests for hooks and utility functions by integrating Jest
+- Implement virtual scrolling for large call lists
+- Add pagination or infinite scroll instead of loading all calls or can use intersection observer to have this infinite scroll.
+- Move token storage to httpOnly cookies instead of localStorage. // security
+- Implement refresh token mechanism
+
 ## Contributor
 Manish Singh
