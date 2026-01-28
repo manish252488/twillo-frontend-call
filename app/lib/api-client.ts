@@ -30,15 +30,20 @@ async function request<T>(endpoint: string, options: RequestInit = {}): Promise<
     headers: { ...headers, ...(options.headers as Record<string, string>) },
   });
 
+  const result = await response.json();
+
   if (!response.ok) {
     if (response.status === 401) {
       removeToken();
     }
-    const error = await response.json().catch(() => ({ error: 'Request failed' }));
-    throw new Error(error.error || 'Request failed');
+    throw new Error(result.error || 'Request failed');
   }
 
-  return response.json();
+  if (result && typeof result === 'object' && 'success' in result && 'data' in result) {
+    return result.data as T;
+  }
+
+  return result as T;
 }
 
 export const apiClient = {
