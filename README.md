@@ -54,10 +54,11 @@ I kept components relatively simple and focused on single responsibilities:
 ## What I Would Improve With More Time
 
 - Unit tests for hooks and utility functions by integrating Jest
-- Implement virtual scrolling for large call lists
-- Add pagination or infinite scroll instead of loading all calls or can use intersection observer to have this infinite scroll.
-- Move token storage to httpOnly cookies instead of localStorage. // security
+- Implement Localization using i18next.
+- Work on the SEO part updating the page metadata.
+- Implement virtual scrolling for large call lists like adding pagination or infinite scroll instead of loading all calls or can use intersection observer to have this infinite scroll.
 - Implement refresh token mechanism
+- Move token storage to httpOnly cookies instead of localStorage.
 
 ## Contributor
 Manish Singh
